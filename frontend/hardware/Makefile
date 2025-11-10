@@ -9,7 +9,6 @@ DW_PATH := /ids/tools/SYNOPSYS/syn/S-2021.06-SP4/dw/sim_ver
 
 ASAP7_BASE := $(ROOT)/../asap7
 ASAP7_LIB_PATH := $(ASAP7_BASE)/asap7sc7p5t_28/LIB/NLDM
-ASAP7_DB_PATH := $(ASAP7_BASE)/asap7sc7p5t_28/LIB/CCS
 
 DESIGN_NAME ?= dvlsi_system
 TECH_NAME ?= asap7
