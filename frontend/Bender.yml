@@ -1,0 +1,30 @@
+package:
+  name: dvlsi_system
+  authors:
+    - "Seungheon Baek <qwdqwd00@g.skku.edu>"
+
+
+dependencies:
+  axi: { git: "https://github.com/pulp-platform/axi.git", version: 0.39.6 }
+  common_cells:
+    { git: "https://github.com/pulp-platform/common_cells", version: 1.22.1 }
+  cva6:                
+    git: "https://github.com/shb96/cva6-dvlsi.git"
+    rev: 3f0a7e0b9f93accd84aad97f022c2b5fbae104b5
+    import_target: cv64a6_imafdc_sv39
+  tech_cells_generic: { git: "https://github.com/pulp-platform/tech_cells_generic.git",       version: 0.2.13                               }
+  apb:                { git: "https://github.com/pulp-platform/apb.git",                      version: 0.2.4                                }
+
+workspace:
+  checkout_dir: "hardware/deps"
+
+sources:
+  include_dirs:
+    # Headers
+    - hardware/include
+    - hardware/deps/cva6/core/include
+    - hardware/deps/axi/include/axi
+  files:
+    # Sources
+    - hardware/include/dvlsi_pkg.sv
+    - hardware/src/dvlsi_system.sv
